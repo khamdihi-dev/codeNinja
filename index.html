@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <title>Jual Script Automation & Jasa Coding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f8f9fa;
+      color: #343a40;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background: #1d3557 !important;
+      border-bottom: 1px solid #a8dadc;
+    }
+    .navbar-brand,
+    .nav-link {
+      color: #f1faee !important;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover { color: #ffb703 !important; }
+    .hero {
+      background: linear-gradient(135deg, #457b9d, #1d3557);
+      height: 400px;
+      position: relative;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 0 15px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .hero .btn {
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border: none;
+      border-radius: 50px;
+    }
+    .hero .btn:hover {
+      background: #ffb703;
+      color: #1d3557;
+    }
+    #about {
+      background: #f1faee;
+      padding: 50px 0;
+    }
+    #about h2 { color: #1d3557; }
+    #products-container {
+      padding: 50px 0;
+    }
+    #products-container h2 { color: #1d3557; }
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      background: #ffffff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    #services {
+      background: #fff;
+      padding: 50px 0;
+    }
+    #services h2 { color: #1d3557; }
+    .service-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    .cart-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: #1d3557;
+      color: #f1faee;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .cart-btn:hover { transform: scale(1.1); }
+    .cart-badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #e63946;
+      color: #ffffff;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    footer {
+      background: #1d3557;
+      color: #f1faee;
+      border-top: 1px solid #a8dadc;
+      margin-top: auto;
+      padding: 20px 0;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .hero { height: 300px; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-shop"></i> Script & Coding
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products-container">Script Automation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Jasa Coding</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/6283853140469" target="_blank">Contact</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Cari produk..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="display-4">Jual Script Automation & Jasa Coding</h1>
+      <p class="lead">Script automation berbasis Python serta layanan coding profesional untuk Python & JavaScript</p>
+      <a href="#products-container" class="btn btn-lg" style="background: #f1faee; color: #1d3557;">
+        Mulai Belanja
+      </a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row g-5 align-items-center animate-on-scroll">
+        <div class="col-lg-6">
+          <img src="img/about.jpeg" alt="Tentang Kami" class="img-fluid rounded shadow" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4">Tentang Kami</h2>
+          <p>Kami menyediakan script automation yang dikembangkan dengan bahasa Python, serta menawarkan jasa coding profesional untuk Python dan JavaScript. Dengan pengalaman dan kualitas yang terjamin, kami siap membantu kebutuhan otomasi dan pengembangan aplikasi Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container my-5" id="products-container">
+    <h2 class="mb-4 text-center">Script Automation</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/brute.jpeg" class="card-img-top" alt="Script Bruteforce Instagram" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">Script Bruteforce Instagram</h5>
+            <p class="card-text">Script ini memudahkan kamu untuk mendapatkan akun Instagram random dengan methode bruteforce. Cocok buat kalian yang butuh banyak akun.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <span class="text-primary fw-bold">Rp 700.000</span>
+            <button class="btn btn-sm add-to-cart" data-product='{"name":"Script Bruteforce Instagram","price":700000}'>
+              <i class="bi bi-cart-plus"></i> Tambah
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/scrap.jpeg" class="card-img-top" alt="Script Data Scraper" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">Script Data Scraper</h5>
+            <p class="card-text">Script untuk mengambil data dari situs web atau platform tertentu secara otomatis.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <span class="text-primary fw-bold">Rp 200.000 - 500.000</span>
+            <button class="btn btn-sm add-to-cart" data-product='{"name":"Script Data Scraper","price":300000}'>
+              <i class="bi bi-cart-plus"></i> Tambah
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/2fa.jpeg" class="card-img-top" alt="Script Ubah data Instagram" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">Script Ubah Data Instagram Tanpa Nunggu</h5>
+            <p class="card-text">Script untuk mengubah data email,nomor dan mengaktifkan authentikasi 2 factor Instagram secara instan, tanpa delay.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <span class="text-primary fw-bold">Rp 1.000.000</span>
+            <button class="btn btn-sm add-to-cart" data-product='{"name":"Script Ubah Data Instagram","price":1000000}'>
+              <i class="bi bi-cart-plus"></i> Tambah
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="no-results" class="text-center my-4" style="display: none;">Hasil tidak tersedia.</div>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="mb-4 text-center">Jasa Coding</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="service-card p-4">
+            <i class="bi bi-code-slash" style="font-size: 3rem; color: #1d3557;"></i>
+            <h4 class="mt-3">Jasa Coding Python</h4>
+            <p>Layanan pembuatan aplikasi dan otomasi menggunakan Python. Solusi tepat untuk kebutuhan script automation.</p>
+            <a href="https://wa.me/6283853140469" target="_blank" class="btn btn-outline-primary">Hubungi Kami</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-card p-4">
+            <i class="bi bi-display" style="font-size: 3rem; color: #1d3557;"></i>
+            <h4 class="mt-3">Jasa Coding JavaScript</h4>
+            <p>Layanan pembuatan aplikasi web, integrasi, dan automasi menggunakan JavaScript. Solusi inovatif untuk front-end maupun back-end.</p>
+            <a href="https://wa.me/6283853140469" target="_blank" class="btn btn-outline-primary">Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cart-btn" onclick="openCartModal()">
+    <i class="bi bi-cart"></i>
+    <span class="cart-badge" id="cart-count">0</span>
+  </div>
+
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Keranjang Belanja</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Produk</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+                <th>Subtotal</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+          </table>
+          <h5 class="text-end">Total: <span id="cart-total">0</span></h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="clear-cart">Hapus Semua</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-primary" id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Script & Coding. All rights reserved.</p>
+      <p>
+        <a href="https://web.facebook.com/dWxmYWgu" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="https://github.com/khamdihi-dev" class="text-white mx-2"><i class="bi bi-github"></i></a>
+        <a href="https://www.youtube.com/@khamdihidev" class="text-white mx-2"><i class="bi bi-youtube"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    function updateCartCount() {
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      document.getElementById('cart-count').textContent = count;
+    }
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const product = JSON.parse(button.dataset.product);
+        const existingItem = cart.find(item => item.name === product.name);
+        if (existingItem) { existingItem.quantity++; }
+        else { product.quantity = 1; cart.push(product); }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        alert(`${product.name} ditambahkan ke keranjang!`);
+      });
+    });
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      updateCartModal();
+    }
+    document.getElementById('clear-cart').addEventListener('click', () => {
+      if (confirm('Yakin ingin menghapus semua item dari keranjang?')) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        updateCartModal();
+      }
+    });
+    function updateCartModal() {
+      const cartItemsContainer = document.getElementById('cart-items');
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.name}</td>
+          <td>Rp ${item.price.toLocaleString()}</td>
+          <td>${item.quantity}</td>
+          <td>Rp ${subtotal.toLocaleString()}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        `;
+        cartItemsContainer.appendChild(tr);
+      });
+      document.getElementById('cart-total').textContent = 'Rp ' + total.toLocaleString();
+    }
+    function openCartModal() {
+      if (cart.length === 0) {
+        alert('Keranjang masih kosong!');
+        return;
+      }
+      updateCartModal();
+      const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+      cartModal.show();
+    }
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Keranjang masih kosong!');
+        return;
+      }
+      const phoneNumber = '6283853140469';
+      let message = 'Halo, saya ingin memesan:\n\n';
+      let total = 0;
+      cart.forEach(item => {
+        message += `${item.name} - ${item.quantity} x Rp ${item.price.toLocaleString()}\n`;
+        total += item.quantity * item.price;
+      });
+      message += `\nTotal: Rp ${total.toLocaleString()}\n\nSilakan konfirmasi pesanan saya.`;
+      const encodedMessage = encodeURIComponent(message);
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    });
+    updateCartCount();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      animateElements.forEach(el => observer.observe(el));
+    });
+  </script>
+  <script>
+    document.querySelector('form.d-flex').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('products-container').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    const searchInput = document.querySelector('input[type="search"]');
+    searchInput.addEventListener('input', function () {
+      const query = this.value.trim().toLowerCase();
+      const productColumns = document.querySelectorAll('#products-container .col-md-4');
+      let visibleCount = 0;
+      productColumns.forEach(column => {
+        const title = column.querySelector('.card-title').textContent.toLowerCase();
+        if (query === "" || title.includes(query)) {
+          column.style.display = "";
+          visibleCount++;
+        } else {
+          column.style.display = "none";
+        }
+      });
+      document.getElementById("no-results").style.display = (visibleCount === 0) ? "block" : "none";
+    });
+  </script>
+</body>
+</html>
